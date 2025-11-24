@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "type": "module",
   "description": "A premium, high-performance conference website built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**. This project features a modern dark aesthetic, smooth scroll animations, and a fully responsive design tailored for a seamless user experience.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.24",
