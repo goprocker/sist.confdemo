@@ -99,21 +99,6 @@ export default function Hero() {
                 </FadeIn>
             </div>
 
-            {/* Scroll Hint */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 2, duration: 1 }}
-                className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 text-gray-600"
-            >
-                <span className="text-sm uppercase tracking-widest font-semibold">Scroll to explore</span>
-                <motion.div
-                    animate={{ y: [0, 10, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                >
-                    <ChevronDown size={20} />
-                </motion.div>
-            </motion.div>
         </section>
     );
 }
