@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Dr. Sarah Johnson",
+        "designation": "Chief AI Scientist",
+        "institution": "Tech University",
+        "image": "/images/speaker1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Prof. David Lee",
+        "designation": "Director of Research",
+        "institution": "Future Labs",
+        "image": "/images/speaker2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Emily Chen",
+        "designation": "VP of Engineering",
+        "institution": "Innovate Corp",
+        "image": "/images/speaker3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Michael Brown",
+        "designation": "Security Architect",
+        "institution": "SecureNet",
+        "image": "/images/speaker4.jpg"
+    }
+]

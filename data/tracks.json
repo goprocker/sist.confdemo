@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Artificial Intelligence & Machine Learning",
+        "description": "Exploring the latest advancements in AI, deep learning, and neural networks.",
+        "icon": "BrainCircuit"
+    },
+    {
+        "id": 2,
+        "title": "Cybersecurity & Privacy",
+        "description": "Addressing the challenges of data protection, network security, and ethical hacking.",
+        "icon": "ShieldCheck"
+    },
+    {
+        "id": 3,
+        "title": "Internet of Things (IoT)",
+        "description": "Connecting the physical and digital worlds through smart devices and sensors.",
+        "icon": "Wifi"
+    },
+    {
+        "id": 4,
+        "title": "Blockchain & Fintech",
+        "description": "Revolutionizing finance and data integrity with decentralized technologies.",
+        "icon": "Bitcoin"
+    },
+    {
+        "id": 5,
+        "title": "Cloud Computing & Big Data",
+        "description": "Scalable infrastructure and data analytics for the modern enterprise.",
+        "icon": "Cloud"
+    }
+]
