@@ -37,17 +37,17 @@ const speakers = [
 
 export default function SpeakersPreviewSection() {
     return (
-        <section id="speakers" className="py-32 bg-gray-900">
+        <section id="speakers" className="py-32 bg-gradient-to-b from-white to-purple-50">
             <div className="container mx-auto px-6">
                 <FadeIn>
                     <div className="flex flex-col md:flex-row justify-between items-end mb-16">
                         <div>
-                            <h2 className="text-4xl font-bold text-white mb-4">Keynote Speakers</h2>
-                            <p className="text-xl text-gray-400 max-w-xl">
+                            <h2 className="text-4xl font-bold text-gray-900 mb-4">Keynote Speakers</h2>
+                            <p className="text-xl text-gray-700 max-w-xl">
                                 Hear from the visionaries shaping the future of technology.
                             </p>
                         </div>
-                        <button className="hidden md:block px-6 py-3 border border-white/20 rounded-full text-white hover:bg-white hover:text-gray-900 transition-colors font-medium">
+                        <button className="hidden md:block px-6 py-3 border border-purple-300 rounded-full text-purple-700 hover:bg-purple-600 hover:text-white hover:border-purple-600 transition-colors font-medium">
                             View All Speakers
                         </button>
                     </div>
@@ -68,7 +68,7 @@ export default function SpeakersPreviewSection() {
                                 {/* Content */}
                                 <div className="absolute bottom-0 left-0 w-full p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                                     <h3 className="text-xl font-bold text-white mb-1">{speaker.name}</h3>
-                                    <p className="text-blue-400 text-sm font-medium mb-1">{speaker.role}</p>
+                                    <p className="text-purple-600 text-sm font-medium mb-1">{speaker.role}</p>
                                     <p className="text-gray-400 text-xs uppercase tracking-wider">{speaker.org}</p>
 
                                     <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
@@ -81,7 +81,7 @@ export default function SpeakersPreviewSection() {
                 </div>
 
                 <div className="mt-12 text-center md:hidden">
-                    <button className="px-8 py-3 border border-white/20 rounded-full text-white hover:bg-white hover:text-gray-900 transition-colors font-medium">
+                    <button className="px-8 py-3 border border-purple-300 rounded-full text-purple-700 hover:bg-purple-600 hover:text-white hover:border-purple-600 transition-colors font-medium">
                         View All Speakers
                     </button>
                 </div>

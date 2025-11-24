@@ -42,16 +42,16 @@ function Counter({ from, to, duration }: { from: number; to: number; duration: n
 
 export default function StatsStrip() {
     return (
-        <section className="py-20 bg-blue-600 text-white">
+        <section className="py-20 bg-gradient-to-r from-purple-600 to-purple-700 text-white">
             <div className="container mx-auto px-6">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center divide-x divide-blue-500/50">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center divide-x divide-purple-500/50">
                     {stats.map((stat, index) => (
                         <div key={stat.label} className="px-4">
                             <div className="text-4xl md:text-6xl font-bold mb-2 flex justify-center items-baseline">
                                 <Counter from={0} to={stat.value} duration={2} />
                                 <span className="text-2xl md:text-4xl ml-1 opacity-80">{stat.suffix}</span>
                             </div>
-                            <div className="text-blue-100 font-medium uppercase tracking-wider text-sm md:text-base">
+                            <div className="text-purple-100 font-medium uppercase tracking-wider text-sm md:text-base">
                                 {stat.label}
                             </div>
                         </div>

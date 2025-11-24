@@ -80,13 +80,13 @@ export default function Navbar() {
         <>
             <header
                 className={cn(
-                    "fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[95%] max-w-7xl rounded-full border border-white/10 bg-gray-900/80 backdrop-blur-md shadow-lg",
+                    "fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[95%] max-w-7xl rounded-full border border-purple-200 bg-gradient-to-r from-amber-100/95 via-purple-100/95 to-purple-200/95 backdrop-blur-md shadow-lg",
                     scrolled ? "py-3" : "py-4"
                 )}
             >
                 <div className="container mx-auto px-6 flex justify-between items-center">
-                    <Link href="/" className="text-2xl font-bold text-white relative z-50">
-                        Conf<span className="text-blue-500">2025</span>
+                    <Link href="/" className="text-2xl font-bold text-gray-900 relative z-50">
+                        Conf<span className="text-purple-600">2025</span>
                     </Link>
 
                     {/* Desktop Nav */}
@@ -100,7 +100,7 @@ export default function Navbar() {
                             >
                                 <Link
                                     href={item.href}
-                                    className="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-white transition-colors py-2"
+                                    className="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-purple-600 transition-colors py-2"
                                 >
                                     {item.label}
                                     {item.children && <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />}
@@ -114,13 +114,13 @@ export default function Navbar() {
                                             animate={{ opacity: 1, y: 0, scale: 1 }}
                                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
                                             transition={{ duration: 0.2 }}
-                                            className="absolute top-full left-0 w-56 bg-gray-900 border border-white/10 rounded-xl shadow-xl overflow-hidden p-2"
+                                            className="absolute top-full left-0 w-56 bg-white border border-purple-200 rounded-xl shadow-xl overflow-hidden p-2"
                                         >
                                             {item.children.map((child) => (
                                                 <Link
                                                     key={child.label}
                                                     href={child.href}
-                                                    className="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+                                                    className="block px-4 py-2 text-sm text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
                                                 >
                                                     {child.label}
                                                 </Link>
@@ -132,7 +132,7 @@ export default function Navbar() {
                         ))}
                         <Link
                             href="/registration"
-                            className="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-full transition-colors"
+                            className="px-5 py-2 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white text-sm font-semibold rounded-full transition-all shadow-md hover:shadow-lg"
                         >
                             Register
                         </Link>
@@ -140,7 +140,7 @@ export default function Navbar() {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="lg:hidden p-2 text-white relative z-[110]"
+                        className="lg:hidden p-2 text-gray-900 relative z-[110]"
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
                         {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -156,11 +156,11 @@ export default function Navbar() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: "100%" }}
                         transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                        className="fixed inset-0 bg-gray-950 z-[100] lg:hidden px-6 overflow-y-auto"
+                        className="fixed inset-0 bg-gradient-to-b from-purple-50 to-amber-50 z-[100] lg:hidden px-6 overflow-y-auto"
                     >
                         <div className="flex justify-end py-8">
                             <button
-                                className="p-2 text-white"
+                                className="p-2 text-gray-900"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 <X size={28} />
@@ -181,7 +181,7 @@ export default function Navbar() {
                                     >
                                         <Link
                                             href={item.href}
-                                            className="text-lg font-medium text-gray-200"
+                                            className="text-lg font-medium text-gray-900"
                                             onClick={(e) => {
                                                 if (item.children) e.preventDefault();
                                             }}
@@ -213,7 +213,7 @@ export default function Navbar() {
                                                         <Link
                                                             key={child.label}
                                                             href={child.href}
-                                                            className="text-gray-400 hover:text-white"
+                                                            className="text-gray-700 hover:text-purple-600"
                                                             onClick={() => setMobileMenuOpen(false)}
                                                         >
                                                             {child.label}

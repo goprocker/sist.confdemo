@@ -5,16 +5,16 @@ import FadeIn from "@/components/animations/FadeIn";
 
 export default function AboutSection() {
     return (
-        <section id="about" className="py-32 bg-gray-950 relative overflow-hidden">
+        <section id="about" className="py-32 bg-gradient-to-b from-white to-amber-50 relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
                 <div className="flex flex-col lg:flex-row items-center gap-16">
                     <div className="lg:w-1/2">
                         <FadeIn direction="right">
-                            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
+                            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
                                 Shaping the Future of <br />
-                                <span className="text-blue-500">Global Innovation</span>
+                                <span className="text-purple-600">Global Innovation</span>
                             </h2>
-                            <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
+                            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                                 <p>
                                     Conf2025 is more than just a conference; it's a convergence of the brightest minds in technology, science, and business. We bring together visionaries to challenge the status quo and define the next generation of digital transformation.
                                 </p>
@@ -36,8 +36,8 @@ export default function AboutSection() {
                                         transition={{ delay: 0.2 + index * 0.1 }}
                                         className="flex items-center gap-3"
                                     >
-                                        <div className="w-2 h-2 rounded-full bg-blue-500" />
-                                        <span className="text-gray-300">{item}</span>
+                                        <div className="w-2 h-2 rounded-full bg-purple-600" />
+                                        <span className="text-gray-800">{item}</span>
                                     </motion.div>
                                 ))}
                             </div>
@@ -46,25 +46,25 @@ export default function AboutSection() {
 
                     <div className="lg:w-1/2 w-full">
                         <FadeIn direction="left" delay={0.2}>
-                            <div className="relative aspect-square md:aspect-video lg:aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-white/10 backdrop-blur-sm p-8 flex items-center justify-center group">
+                            <div className="relative aspect-square md:aspect-video lg:aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-yellow-100 to-purple-100 border border-purple-200 backdrop-blur-sm p-8 flex items-center justify-center group">
                                 <div className="absolute inset-0 bg-grid-white/[0.05] [mask-image:linear-gradient(0deg,transparent,black)]" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-purple-50 via-transparent to-transparent" />
 
                                 {/* Abstract Graphic */}
                                 <div className="relative w-full h-full flex items-center justify-center">
                                     <motion.div
                                         animate={{ rotate: 360 }}
                                         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                                        className="w-[200px] h-[200px] border border-blue-500/30 rounded-full absolute"
+                                        className="w-[200px] h-[200px] border border-purple-400/40 rounded-full absolute"
                                     />
                                     <motion.div
                                         animate={{ rotate: -360 }}
                                         transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                                        className="w-[300px] h-[300px] border border-purple-500/20 rounded-full absolute"
+                                        className="w-[300px] h-[300px] border border-yellow-400/30 rounded-full absolute"
                                     />
                                     <div className="text-center z-10">
-                                        <span className="text-6xl font-bold text-white block mb-2">25+</span>
-                                        <span className="text-blue-400 uppercase tracking-widest text-sm">Years of Excellence</span>
+                                        <span className="text-6xl font-bold text-gray-900 block mb-2">25+</span>
+                                        <span className="text-purple-600 uppercase tracking-widest text-sm">Years of Excellence</span>
                                     </div>
                                 </div>
                             </div>

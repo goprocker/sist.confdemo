@@ -11,7 +11,7 @@ import NewsletterSection from "@/components/sections/NewsletterSection";
 
 export default function Home() {
   return (
-    <div className="flex flex-col bg-gradient-to-b from-white via-gray-50 to-gray-100 min-h-screen">
+    <div className="flex flex-col bg-gradient-to-b from-white via-gray-50 to-amber-50 min-h-screen">
       <Hero />
       <AboutSection />
       <StatsStrip />
