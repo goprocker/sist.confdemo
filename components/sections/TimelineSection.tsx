@@ -5,19 +5,19 @@ import FadeIn from "@/components/animations/FadeIn";
 const schedule = [
     {
         day: "Day 1",
-        date: "November 15",
+        date: "July 15, 2026",
         title: "The Future of AI",
         highlights: ["Opening Keynote by Dr. Elena Rodriguez", "Panel: Ethics in Generative AI", "Networking Mixer"]
     },
     {
         day: "Day 2",
-        date: "November 16",
+        date: "July 16, 2026",
         title: "Building Scalable Systems",
         highlights: ["Workshop: Rust for Web Dev", "Cloud Native Architecture", "Gala Dinner"]
     },
     {
         day: "Day 3",
-        date: "November 17",
+        date: "July 17, 2026",
         title: "Innovation & Startups",
         highlights: ["Startup Pitch Competition", "Closing Keynote", "Awards Ceremony"]
     }
