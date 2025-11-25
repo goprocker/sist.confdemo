@@ -8,7 +8,7 @@ import FadeIn from "@/components/animations/FadeIn";
 const faqs = [
     {
         question: "When and where is Conf2025 taking place?",
-        answer: "Conf2025 will be held from November 15-17, 2025, at the Grand Convention Center in San Francisco, CA. Virtual attendance options are also available."
+        answer: "Conf2025 will be held from July 15-17, 2026, at Sathyabama Institute Of Science & Technology, Chennai. Virtual attendance options are also available."
     },
     {
         question: "How can I register for the conference?",
@@ -78,7 +78,3 @@ export default function FAQSection() {
         </section>
     );
 }
-
-
-
-

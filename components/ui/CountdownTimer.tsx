@@ -50,7 +50,7 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
     return (
         <div className="flex flex-col items-center gap-8 my-12">
             <h3 className="text-2xl md:text-3xl font-bold text-primary-900 uppercase tracking-wide text-center">
-                Last Day to Register is 1st December 2025
+                Last Day to Register is July 15th, 2026
             </h3>
             <div className="flex gap-4 sm:gap-6">
                 <TimeUnit value={timeLeft.days} label="Days" />

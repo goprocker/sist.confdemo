@@ -55,7 +55,7 @@ export default function HeroSection() {
                     <FadeIn direction="down">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-50/10 backdrop-blur-md border border-white/20 text-sm font-medium mb-8 hover:bg-primary-50/20 transition-colors cursor-default">
                             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                            November 15-17, 2025 â€¢ San Francisco, CA
+                            July 15-17, 2026 • Sathyabama Institute Of Science & Technology, Chennai
                         </div>
                     </FadeIn>
 
@@ -108,7 +108,3 @@ export default function HeroSection() {
         </section>
     );
 }
-
-
-
-

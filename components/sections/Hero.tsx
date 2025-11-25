@@ -67,7 +67,7 @@ export default function Hero() {
                 <FadeIn direction="down" delay={0.2}>
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-600/10 backdrop-blur-md border border-primary-400/30 text-sm font-medium mb-8 text-primary-900 shadow-lg">
                         <span className="w-2 h-2 rounded-full bg-primary-600 animate-pulse"></span>
-                        November 15-17, 2025 â€¢ San Francisco, CA
+                        July 15-17, 2026 • Sathyabama Institute Of Science & Technology, Chennai
                     </div>
                 </FadeIn>
 
@@ -95,14 +95,10 @@ export default function Hero() {
                             Learn More
                         </Link>
                     </div>
-                    <CountdownTimer targetDate={new Date("2025-12-01T00:00:00")} />
+                    <CountdownTimer targetDate={new Date("2026/07/15")} />
                 </FadeIn>
             </div>
 
         </section>
     );
 }
-
-
-
-
