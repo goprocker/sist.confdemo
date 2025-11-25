@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+﻿import type { Config } from "tailwindcss";
 
 const config: Config = {
     content: [
@@ -9,7 +9,19 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                primary: "#0057FF",
+                primary: {
+                    DEFAULT: "var(--primary-600)",
+                    50: "var(--primary-50)",
+                    100: "var(--primary-100)",
+                    200: "var(--primary-200)",
+                    300: "var(--primary-300)",
+                    400: "var(--primary-400)",
+                    500: "var(--primary-500)",
+                    600: "var(--primary-600)",
+                    700: "var(--primary-700)",
+                    800: "var(--primary-800)",
+                    900: "var(--primary-900)",
+                },
                 background: "#F5F7FF",
                 foreground: "#0A0A0A",
             },
@@ -41,3 +53,7 @@ const config: Config = {
     plugins: [],
 };
 export default config;
+
+
+
+

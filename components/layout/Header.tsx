@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -40,12 +40,12 @@ export default function Header() {
         <header
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-                scrolled || isOpen ? "bg-white/90 backdrop-blur-md shadow-md py-4" : "bg-transparent py-6"
+                scrolled || isOpen ? "bg-primary-50/90 backdrop-blur-md shadow-md py-4" : "bg-transparent py-6"
             )}
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <Link href="/" className="text-2xl font-bold text-primary relative z-50">
-                    Conf<span className={cn("transition-colors", scrolled || isOpen ? "text-black" : "text-white")}>2025</span>
+                    Conf<span className={cn("transition-colors", scrolled || isOpen ? "text-black" : "text-primary-50")}>2025</span>
                 </Link>
 
                 {/* Desktop Nav */}
@@ -56,7 +56,7 @@ export default function Header() {
                             href={item.href}
                             className={cn(
                                 "text-sm font-medium transition-colors hover:text-primary",
-                                scrolled ? "text-gray-700" : "text-gray-200",
+                                scrolled ? "text-primary-700" : "text-gray-200",
                                 pathname === item.href && "text-primary font-bold"
                             )}
                         >
@@ -69,7 +69,7 @@ export default function Header() {
                 <button
                     className={cn(
                         "md:hidden p-2 relative z-50 transition-colors",
-                        scrolled || isOpen ? "text-gray-900" : "text-white"
+                        scrolled || isOpen ? "text-primary-900" : "text-primary-50"
                     )}
                     onClick={() => setIsOpen(!isOpen)}
                 >
@@ -85,7 +85,7 @@ export default function Header() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-0 left-0 right-0 bg-white shadow-xl md:hidden pt-24 pb-8 px-6 min-h-screen flex flex-col"
+                        className="absolute top-0 left-0 right-0 bg-primary-50 shadow-xl md:hidden pt-24 pb-8 px-6 min-h-screen flex flex-col"
                     >
                         <nav className="flex flex-col space-y-6">
                             {navItems.map((item) => (
@@ -94,7 +94,7 @@ export default function Header() {
                                     href={item.href}
                                     className={cn(
                                         "text-2xl font-bold transition-colors",
-                                        pathname === item.href ? "text-primary" : "text-gray-800 hover:text-primary"
+                                        pathname === item.href ? "text-primary" : "text-primary-800 hover:text-primary"
                                     )}
                                     onClick={() => setIsOpen(false)}
                                 >
@@ -108,3 +108,5 @@ export default function Header() {
         </header>
     );
 }
+
+

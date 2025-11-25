@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -30,3 +30,7 @@ export default function TextReveal({ children, className = "", delay = 0 }: Text
         </span>
     );
 }
+
+
+
+

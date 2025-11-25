@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -24,12 +24,12 @@ export default function TracksPreviewSection() {
         : tracks.filter(track => track.category === activeFilter);
 
     return (
-        <section id="tracks" className="py-32 bg-gradient-to-b from-amber-50 to-white">
+        <section id="tracks" className="py-32 bg-gradient-to-b from-primary-50 to-white">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
                     <FadeIn>
-                        <h2 className="text-4xl font-bold text-gray-900 mb-4">Explore Tracks</h2>
-                        <p className="text-xl text-gray-700 max-w-xl">
+                        <h2 className="text-4xl font-bold text-primary-900 mb-4">Explore Tracks</h2>
+                        <p className="text-xl text-primary-700 max-w-xl">
                             Dive deep into specific areas of interest with our curated tracks.
                         </p>
                     </FadeIn>
@@ -41,8 +41,8 @@ export default function TracksPreviewSection() {
                                     key={filter}
                                     onClick={() => setActiveFilter(filter)}
                                     className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${activeFilter === filter
-                                        ? "bg-purple-600 text-white"
-                                        : "bg-white text-gray-700 hover:bg-purple-50 hover:text-purple-600 border border-gray-200"
+                                        ? "bg-primary-600 text-primary-50"
+                                        : "bg-primary-50 text-primary-700 hover:bg-primary-50 hover:text-primary-600 border border-primary-200"
                                         }`}
                                 >
                                     {filter}
@@ -62,24 +62,24 @@ export default function TracksPreviewSection() {
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{ duration: 0.3 }}
-                                className="relative bg-white backdrop-blur-md border border-purple-200 p-8 rounded-2xl transition-all duration-300 group cursor-pointer overflow-hidden hover:shadow-[0_10px_40px_-10px_rgba(147,51,234,0.3)] hover:border-purple-400 hover:-translate-y-2"
+                                className="relative bg-primary-50 backdrop-blur-md border border-primary-200 p-8 rounded-2xl transition-all duration-300 group cursor-pointer overflow-hidden hover:shadow-lg hover:shadow-primary-600/30 hover:border-primary-400 hover:-translate-y-2"
                             >
-                                <div className="absolute inset-0 bg-gradient-to-br from-yellow-100/30 to-purple-100/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                <div className="absolute inset-0 bg-gradient-to-br from-primary-100/30 to-primary-100/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                                 <div className="relative z-10">
                                     <div className="flex justify-between items-start mb-6">
-                                        <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors shadow-sm group-hover:shadow-purple-500/25">
+                                        <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 group-hover:bg-primary-600 group-hover:text-primary-50 transition-colors shadow-sm group-hover:shadow-primary-500/25">
                                             <track.icon size={24} />
                                         </div>
-                                        <span className="text-xs font-medium text-gray-600 uppercase tracking-wider border border-gray-300 px-2 py-1 rounded bg-gray-50">
+                                        <span className="text-xs font-medium text-primary-600 uppercase tracking-wider border border-primary-300 px-2 py-1 rounded bg-primary-50">
                                             {track.category}
                                         </span>
                                     </div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">{track.title}</h3>
-                                    <p className="text-gray-700 mb-6 text-sm leading-relaxed group-hover:text-gray-800 transition-colors">
+                                    <h3 className="text-xl font-bold text-primary-900 mb-3 group-hover:text-primary-600 transition-colors">{track.title}</h3>
+                                    <p className="text-primary-700 mb-6 text-sm leading-relaxed group-hover:text-primary-800 transition-colors">
                                         {track.description}
                                     </p>
-                                    <div className="flex items-center text-purple-600 text-sm font-medium group-hover:translate-x-2 transition-transform">
+                                    <div className="flex items-center text-primary-600 text-sm font-medium group-hover:translate-x-2 transition-transform">
                                         View details <ArrowRight size={16} className="ml-1" />
                                     </div>
                                 </div>
@@ -90,7 +90,7 @@ export default function TracksPreviewSection() {
 
                 <FadeIn delay={0.4}>
                     <div className="mt-16 text-center">
-                        <a href="#" className="inline-flex items-center text-gray-700 hover:text-purple-600 transition-colors border-b border-transparent hover:border-purple-600 pb-1">
+                        <a href="#" className="inline-flex items-center text-primary-700 hover:text-primary-600 transition-colors border-b border-transparent hover:border-primary-600 pb-1">
                             View all 20+ tracks <ArrowRight size={16} className="ml-2" />
                         </a>
                     </div>
@@ -99,3 +99,7 @@ export default function TracksPreviewSection() {
         </section>
     );
 }
+
+
+
+

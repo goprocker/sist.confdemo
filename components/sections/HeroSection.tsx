@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -10,7 +10,7 @@ const quickLinks = [
         title: "Explore Tracks",
         icon: Calendar,
         href: "/tracks",
-        color: "bg-blue-500",
+        color: "bg-primary-500",
         desc: "Discover our diverse sessions"
     },
     {
@@ -38,12 +38,12 @@ const quickLinks = [
 
 export default function HeroSection() {
     return (
-        <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-gray-900 text-white pt-20">
+        <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-primary-900 text-primary-50 pt-20">
             {/* Dynamic Background */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-indigo-950 to-black opacity-90"></div>
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-30">
-                    <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+                    <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary-600 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
                     <div className="absolute top-[20%] right-[-10%] w-[30%] h-[30%] bg-purple-600 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000"></div>
                     <div className="absolute bottom-[-10%] left-[20%] w-[35%] h-[35%] bg-pink-600 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-4000"></div>
                 </div>
@@ -53,9 +53,9 @@ export default function HeroSection() {
             <div className="container mx-auto px-6 relative z-10 flex-grow flex flex-col justify-center">
                 <div className="max-w-4xl mx-auto text-center mb-16">
                     <FadeIn direction="down">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sm font-medium mb-8 hover:bg-white/20 transition-colors cursor-default">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-50/10 backdrop-blur-md border border-white/20 text-sm font-medium mb-8 hover:bg-primary-50/20 transition-colors cursor-default">
                             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                            November 15-17, 2025 • San Francisco, CA
+                            November 15-17, 2025 â€¢ San Francisco, CA
                         </div>
                     </FadeIn>
 
@@ -70,7 +70,7 @@ export default function HeroSection() {
                     </FadeIn>
 
                     <FadeIn delay={0.2}>
-                        <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-xl md:text-2xl text-primary-300 mb-10 max-w-2xl mx-auto leading-relaxed">
                             The premier global conference where technology meets imagination.
                             Join 2000+ innovators for 3 days of breakthrough discoveries.
                         </p>
@@ -78,10 +78,10 @@ export default function HeroSection() {
 
                     <FadeIn delay={0.3}>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-                            <Link href="/registration" className="group relative px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-bold text-lg transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 flex items-center gap-2 overflow-hidden">
+                            <Link href="/registration" className="group relative px-8 py-4 bg-primary-600 hover:bg-primary-500 text-primary-50 rounded-full font-bold text-lg transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 flex items-center gap-2 overflow-hidden">
                                 <span className="relative z-10 flex items-center gap-2">Register Now <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" /></span>
                             </Link>
-                            <Link href="/about" className="px-8 py-4 bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 text-white rounded-full font-bold text-lg transition-all hover:border-white/30">
+                            <Link href="/about" className="px-8 py-4 bg-primary-50/5 hover:bg-primary-50/10 backdrop-blur-sm border border-white/10 text-primary-50 rounded-full font-bold text-lg transition-all hover:border-white/30">
                                 Learn More
                             </Link>
                         </div>
@@ -93,12 +93,12 @@ export default function HeroSection() {
                     {quickLinks.map((link, index) => (
                         <FadeIn key={link.title} delay={0.4 + index * 0.1} direction="up" className="h-full">
                             <Link href={link.href} className="block h-full group">
-                                <div className="h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all hover:border-white/20 hover:-translate-y-1">
+                                <div className="h-full bg-primary-50/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-primary-50/10 transition-all hover:border-white/20 hover:-translate-y-1">
                                     <div className={`w-12 h-12 ${link.color} rounded-xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform`}>
-                                        <link.icon size={24} className="text-white" />
+                                        <link.icon size={24} className="text-primary-50" />
                                     </div>
                                     <h3 className="text-xl font-bold mb-1 group-hover:text-blue-300 transition-colors">{link.title}</h3>
-                                    <p className="text-sm text-gray-400">{link.desc}</p>
+                                    <p className="text-sm text-primary-400">{link.desc}</p>
                                 </div>
                             </Link>
                         </FadeIn>
@@ -108,3 +108,7 @@ export default function HeroSection() {
         </section>
     );
 }
+
+
+
+

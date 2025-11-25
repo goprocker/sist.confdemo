@@ -1,4 +1,4 @@
-import Hero from "@/components/sections/Hero";
+﻿import Hero from "@/components/sections/Hero";
 import AboutSection from "@/components/sections/AboutSection";
 import WhyAttendSection from "@/components/sections/WhyAttendSection";
 import TracksPreviewSection from "@/components/sections/TracksPreviewSection";
@@ -11,7 +11,7 @@ import NewsletterSection from "@/components/sections/NewsletterSection";
 
 export default function Home() {
   return (
-    <div className="flex flex-col bg-gradient-to-b from-white via-gray-50 to-amber-50 min-h-screen">
+    <div className="flex flex-col bg-gradient-to-b from-primary-50 via-primary-100 to-primary-200 min-h-screen">
       <Hero />
       <AboutSection />
       <StatsStrip />
@@ -25,3 +25,7 @@ export default function Home() {
     </div>
   );
 }
+
+
+
+

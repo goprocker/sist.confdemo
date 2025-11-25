@@ -1,15 +1,22 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
-  title: "Conf2025 - The Future of Technology",
-  description: "Join us for the premier technology conference of 2025.",
+  title: "SIST Conference 2024",
+  description: "Join us for the biggest tech conference of the year",
 };
 
 export default function RootLayout({
@@ -18,14 +25,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${manrope.variable} font-sans antialiased bg-white text-gray-900`}>
+    <html lang="en" className="scroll-smooth" data-theme="red" suppressHydrationWarning>
+      <body
+        className={`${manrope.variable} ${inter.variable} font-sans antialiased bg-primary-50 text-primary-900`}
+      >
         <Navbar />
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
   );
 }
+
+

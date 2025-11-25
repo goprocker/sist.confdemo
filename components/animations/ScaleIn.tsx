@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -29,3 +29,7 @@ export default function ScaleIn({ children, className = "", delay = 0 }: ScaleIn
         </motion.div>
     );
 }
+
+
+
+

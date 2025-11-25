@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -25,13 +25,13 @@ export default function Schedule() {
     const [activeDay, setActiveDay] = useState("Day 1");
 
     return (
-        <div className="bg-gray-950 min-h-screen pt-32">
+        <div className="bg-primary-900 min-h-screen pt-32">
             <section id="schedule" className="py-24">
                 <div className="container mx-auto px-6">
                     <FadeIn>
                         <div className="text-center mb-12">
-                            <h2 className="text-4xl font-bold text-white mb-4">Event Schedule</h2>
-                            <p className="text-xl text-gray-400">Don't miss a moment of the action.</p>
+                            <h2 className="text-4xl font-bold text-primary-50 mb-4">Event Schedule</h2>
+                            <p className="text-xl text-primary-400">Don't miss a moment of the action.</p>
                         </div>
                     </FadeIn>
 
@@ -41,7 +41,7 @@ export default function Schedule() {
 
                     <FadeIn delay={0.2}>
                         <div className="flex justify-center mb-12">
-                            <div className="bg-white/5 p-1 rounded-full shadow-sm border border-white/10 inline-flex backdrop-blur-sm">
+                            <div className="bg-primary-50/5 p-1 rounded-full shadow-sm border border-white/10 inline-flex backdrop-blur-sm">
                                 {days.map((day) => (
                                     <button
                                         key={day}
@@ -49,8 +49,8 @@ export default function Schedule() {
                                         className={cn(
                                             "px-6 py-2 rounded-full text-sm font-medium transition-all",
                                             activeDay === day
-                                                ? "bg-blue-600 text-white shadow-lg shadow-blue-900/50"
-                                                : "text-gray-400 hover:text-white hover:bg-white/5"
+                                                ? "bg-primary-600 text-primary-50 shadow-lg shadow-blue-900/50"
+                                                : "text-primary-400 hover:text-primary-50 hover:bg-primary-50/5"
                                         )}
                                     >
                                         {day}
@@ -65,12 +65,12 @@ export default function Schedule() {
                         {scheduleData[activeDay].map((item: any, index: number) => (
                             <FadeIn key={`${activeDay}-${index}`} delay={index * 0.1} direction="left">
                                 <div
-                                    className="bg-gray-900 p-6 rounded-xl shadow-lg border border-white/5 mb-4 flex flex-col md:flex-row md:items-center gap-4 hover:border-blue-500/30 transition-colors"
+                                    className="bg-primary-900 p-6 rounded-xl shadow-lg border border-white/5 mb-4 flex flex-col md:flex-row md:items-center gap-4 hover:border-blue-500/30 transition-colors"
                                 >
                                     <div className="md:w-32 font-bold text-blue-400">{item.time}</div>
                                     <div className="flex-1">
-                                        <h4 className="text-lg font-bold text-white">{item.title}</h4>
-                                        <span className="inline-block px-2 py-1 bg-white/5 text-gray-400 text-xs rounded mt-2 border border-white/10">
+                                        <h4 className="text-lg font-bold text-primary-50">{item.title}</h4>
+                                        <span className="inline-block px-2 py-1 bg-primary-50/5 text-primary-400 text-xs rounded mt-2 border border-white/10">
                                             {item.type}
                                         </span>
                                     </div>
@@ -89,3 +89,7 @@ export default function Schedule() {
         </div>
     );
 }
+
+
+
+

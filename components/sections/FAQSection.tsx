@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -32,12 +32,12 @@ export default function FAQSection() {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     return (
-        <section className="py-32 bg-gradient-to-b from-white to-purple-50">
+        <section className="py-32 bg-gradient-to-b from-white to-primary-50">
             <div className="container mx-auto px-6 max-w-3xl">
                 <FadeIn>
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-                        <p className="text-xl text-gray-700">
+                        <h2 className="text-4xl font-bold text-primary-900 mb-6">Frequently Asked Questions</h2>
+                        <p className="text-xl text-primary-700">
                             Everything you need to know about Conf2025.
                         </p>
                     </div>
@@ -46,13 +46,13 @@ export default function FAQSection() {
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (
                         <FadeIn key={index} delay={index * 0.1}>
-                            <div className="border border-purple-200 rounded-2xl bg-white overflow-hidden shadow-sm">
+                            <div className="border border-primary-200 rounded-2xl bg-primary-50 overflow-hidden shadow-sm">
                                 <button
                                     onClick={() => setActiveIndex(activeIndex === index ? null : index)}
-                                    className="w-full flex justify-between items-center p-6 text-left hover:bg-purple-50 transition-colors"
+                                    className="w-full flex justify-between items-center p-6 text-left hover:bg-primary-50 transition-colors"
                                 >
-                                    <span className="text-lg font-medium text-gray-900">{faq.question}</span>
-                                    <span className="text-purple-600">
+                                    <span className="text-lg font-medium text-primary-900">{faq.question}</span>
+                                    <span className="text-primary-600">
                                         {activeIndex === index ? <Minus size={20} /> : <Plus size={20} />}
                                     </span>
                                 </button>
@@ -64,7 +64,7 @@ export default function FAQSection() {
                                             exit={{ height: 0, opacity: 0 }}
                                             transition={{ duration: 0.3 }}
                                         >
-                                            <div className="px-6 pb-6 text-gray-700 leading-relaxed">
+                                            <div className="px-6 pb-6 text-primary-700 leading-relaxed">
                                                 {faq.answer}
                                             </div>
                                         </motion.div>
@@ -78,3 +78,7 @@ export default function FAQSection() {
         </section>
     );
 }
+
+
+
+

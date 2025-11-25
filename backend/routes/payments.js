@@ -1,40 +1,86 @@
-// backend/routes/payments.js
+﻿// backend/routes/payments.js
 const express = require('express');
 const router = express.Router();
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY || 'sk_test_dummy');
+const Razorpay = require('razorpay');
+const crypto = require('crypto');
 
-// Mock payments storage
+// Initialize Razorpay
+const razorpay = new Razorpay({
+    key_id: process.env.RAZORPAY_KEY_ID || 'rzp_test_dummy',
+    key_secret: process.env.RAZORPAY_KEY_SECRET || 'dummy_secret'
+});
+
+// Mock payments storage (replace with DB in production)
 const payments = [];
 
-// Create payment intent
-router.post('/create-intent', async (req, res) => {
+// Create Razorpay Order
+router.post('/create-order', async (req, res) => {
     try {
-        const { amount, currency = 'usd', registrationId } = req.body;
+        const { amount, currency = 'INR', registrationId } = req.body;
 
-        // Create Stripe payment intent
-        const paymentIntent = await stripe.paymentIntents.create({
-            amount: amount * 100, // Convert to cents
+        const options = {
+            amount: amount * 100, // Amount in paise
             currency,
-            metadata: { registrationId: registrationId.toString() },
-        });
+            receipt: `receipt_${registrationId}_${Date.now()}`,
+            notes: {
+                registrationId: registrationId.toString()
+            }
+        };
 
+        const order = await razorpay.orders.create(options);
+
+        // Store initial payment record
         const payment = {
             id: payments.length + 1,
             registrationId,
-            stripePaymentIntentId: paymentIntent.id,
+            razorpayOrderId: order.id,
             amount,
             currency,
-            status: 'pending',
+            status: 'created',
             createdAt: new Date(),
         };
-
         payments.push(payment);
 
         res.json({
-            clientSecret: paymentIntent.client_secret,
-            paymentId: payment.id,
+            orderId: order.id,
+            currency: order.currency,
+            amount: order.amount,
+            keyId: process.env.RAZORPAY_KEY_ID
         });
     } catch (err) {
+        console.error('Error creating order:', err);
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// Verify Payment Signature
+router.post('/verify', async (req, res) => {
+    try {
+        const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
+
+        const body = razorpay_order_id + "|" + razorpay_payment_id;
+
+        const expectedSignature = crypto
+            .createHmac('sha256', process.env.RAZORPAY_KEY_SECRET || 'dummy_secret')
+            .update(body.toString())
+            .digest('hex');
+
+        if (expectedSignature === razorpay_signature) {
+            // Update payment status to paid
+            const payment = payments.find(p => p.razorpayOrderId === razorpay_order_id);
+            if (payment) {
+                payment.status = 'paid';
+                payment.razorpayPaymentId = razorpay_payment_id;
+                payment.razorpaySignature = razorpay_signature;
+                payment.paidAt = new Date();
+            }
+
+            res.json({ status: 'success', message: 'Payment verified successfully' });
+        } else {
+            res.status(400).json({ status: 'failure', message: 'Invalid signature' });
+        }
+    } catch (err) {
+        console.error('Error verifying payment:', err);
         res.status(500).json({ error: err.message });
     }
 });
@@ -48,19 +94,6 @@ router.get('/:id/status', (req, res) => {
     res.json({ payment });
 });
 
-// Stripe webhook endpoint
-router.post('/webhook', express.raw({ type: 'application/json' }), (req, res) => {
-    const sig = req.headers['stripe-signature'];
-
-    try {
-        // Verify webhook signature (in production)
-        // const event = stripe.webhooks.constructEvent(req.body, sig, process.env.STRIPE_WEBHOOK_SECRET);
-
-        // Handle payment events
-        res.json({ received: true });
-    } catch (err) {
-        res.status(400).json({ error: 'Webhook error' });
-    }
-});
-
 module.exports = router;
+
+

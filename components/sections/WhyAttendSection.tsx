@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { Users, Lightbulb, TrendingUp, Code2 } from "lucide-react";
@@ -41,7 +41,7 @@ function SpotlightCard({ reason, index }: { reason: typeof reasons[0], index: nu
     return (
         <FadeIn delay={index * 0.1} className="h-full">
             <div
-                className="group relative border border-purple-200 bg-white px-8 py-10 rounded-2xl h-full overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+                className="group relative border border-primary-200 bg-primary-50 px-8 py-10 rounded-2xl h-full overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
                 onMouseMove={handleMouseMove}
             >
                 <motion.div
@@ -57,11 +57,11 @@ function SpotlightCard({ reason, index }: { reason: typeof reasons[0], index: nu
                     }}
                 />
                 <div className="relative">
-                    <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                    <div className="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 mb-6 group-hover:bg-primary-600 group-hover:text-primary-50 transition-colors">
                         <reason.icon size={28} />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">{reason.title}</h3>
-                    <p className="text-gray-700 leading-relaxed">
+                    <h3 className="text-xl font-bold text-primary-900 mb-4">{reason.title}</h3>
+                    <p className="text-primary-700 leading-relaxed">
                         {reason.description}
                     </p>
                 </div>
@@ -72,12 +72,12 @@ function SpotlightCard({ reason, index }: { reason: typeof reasons[0], index: nu
 
 export default function WhyAttendSection() {
     return (
-        <section className="py-32 bg-gradient-to-b from-gray-50 to-amber-50">
+        <section className="py-32 bg-gradient-to-b from-gray-50 to-primary-50">
             <div className="container mx-auto px-6">
                 <FadeIn>
                     <div className="text-center mb-20">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Attend Conf2025?</h2>
-                        <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+                        <h2 className="text-4xl font-bold text-primary-900 mb-6">Why Attend Conf2025?</h2>
+                        <p className="text-xl text-primary-700 max-w-2xl mx-auto">
                             Experience a conference designed to inspire, educate, and connect.
                         </p>
                     </div>
@@ -92,3 +92,7 @@ export default function WhyAttendSection() {
         </section>
     );
 }
+
+
+
+

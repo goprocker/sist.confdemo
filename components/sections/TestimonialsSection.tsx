@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -41,20 +41,20 @@ export default function TestimonialsSection() {
     };
 
     return (
-        <section className="py-32 bg-gradient-to-b from-amber-50 to-white">
+        <section className="py-32 bg-gradient-to-b from-primary-50 to-white">
             <div className="container mx-auto px-6">
                 <FadeIn>
                     <div className="text-center mb-20">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">What Attendees Say</h2>
+                        <h2 className="text-4xl font-bold text-primary-900 mb-6">What Attendees Say</h2>
                     </div>
                 </FadeIn>
 
                 <div className="max-w-4xl mx-auto relative">
-                    <div className="absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2 text-purple-200/30">
+                    <div className="absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2 text-primary-200/30">
                         <Quote size={120} />
                     </div>
 
-                    <div className="relative bg-white border border-purple-200 rounded-3xl p-12 backdrop-blur-sm shadow-lg">
+                    <div className="relative bg-primary-50 border border-primary-200 rounded-3xl p-12 backdrop-blur-sm shadow-lg">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={currentIndex}
@@ -64,12 +64,12 @@ export default function TestimonialsSection() {
                                 transition={{ duration: 0.3 }}
                                 className="text-center"
                             >
-                                <p className="text-2xl md:text-3xl text-gray-800 italic mb-10 leading-relaxed">
+                                <p className="text-2xl md:text-3xl text-primary-800 italic mb-10 leading-relaxed">
                                     "{testimonials[currentIndex].quote}"
                                 </p>
                                 <div>
-                                    <h4 className="text-xl font-bold text-gray-900">{testimonials[currentIndex].author}</h4>
-                                    <p className="text-purple-600">{testimonials[currentIndex].role}</p>
+                                    <h4 className="text-xl font-bold text-primary-900">{testimonials[currentIndex].author}</h4>
+                                    <p className="text-primary-600">{testimonials[currentIndex].role}</p>
                                 </div>
                             </motion.div>
                         </AnimatePresence>
@@ -77,13 +77,13 @@ export default function TestimonialsSection() {
                         <div className="flex justify-center gap-4 mt-12">
                             <button
                                 onClick={prev}
-                                className="p-3 rounded-full bg-white text-gray-900 hover:bg-purple-600 hover:text-white transition-colors border border-gray-300"
+                                className="p-3 rounded-full bg-primary-50 text-primary-900 hover:bg-primary-600 hover:text-primary-50 transition-colors border border-primary-300"
                             >
                                 <ChevronLeft size={24} />
                             </button>
                             <button
                                 onClick={next}
-                                className="p-3 rounded-full bg-white text-gray-900 hover:bg-purple-600 hover:text-white transition-colors border border-gray-300"
+                                className="p-3 rounded-full bg-primary-50 text-primary-900 hover:bg-primary-600 hover:text-primary-50 transition-colors border border-primary-300"
                             >
                                 <ChevronRight size={24} />
                             </button>
@@ -94,3 +94,7 @@ export default function TestimonialsSection() {
         </section>
     );
 }
+
+
+
+
