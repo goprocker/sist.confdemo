@@ -30,10 +30,10 @@ export default function PaymentModal({ isOpen, onClose, children }: PaymentModal
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.9, y: 20 }}
                             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-                            className="bg-primary-900 rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto pointer-events-auto border border-primary-800"
+                            className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto pointer-events-auto border border-gray-800"
                         >
                             {/* Header */}
-                            <div className="sticky top-0 bg-primary-900/95 backdrop-blur-lg border-b border-primary-800 p-6 flex justify-between items-center z-10">
+                            <div className="sticky top-0 bg-white/95 backdrop-blur-lg border-b border-gray-800 p-6 flex justify-between items-center z-10">
                                 <div className="flex items-center gap-3">
                                     <motion.div
                                         animate={{
@@ -47,7 +47,7 @@ export default function PaymentModal({ isOpen, onClose, children }: PaymentModal
                                         className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center"
                                     >
                                         <svg
-                                            className="w-6 h-6 text-primary-50"
+                                            className="w-6 h-6 text-white"
                                             fill="currentColor"
                                             viewBox="0 0 20 20"
                                         >
@@ -59,10 +59,10 @@ export default function PaymentModal({ isOpen, onClose, children }: PaymentModal
                                         </svg>
                                     </motion.div>
                                     <div>
-                                        <h2 className="text-xl font-bold text-primary-50">
+                                        <h2 className="text-xl font-bold text-white">
                                             Secure Payment
                                         </h2>
-                                        <p className="text-sm text-primary-400">
+                                        <p className="text-sm text-gray-400">
                                             Complete your conference registration
                                         </p>
                                     </div>
@@ -70,7 +70,7 @@ export default function PaymentModal({ isOpen, onClose, children }: PaymentModal
 
                                 <button
                                     onClick={onClose}
-                                    className="text-primary-400 hover:text-primary-50 transition-colors p-2 hover:bg-primary-800 rounded-lg"
+                                    className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-gray-100 rounded-lg"
                                 >
                                     <svg
                                         className="w-6 h-6"
@@ -96,9 +96,9 @@ export default function PaymentModal({ isOpen, onClose, children }: PaymentModal
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.3 }}
-                                className="sticky bottom-0 bg-primary-900/95 backdrop-blur-lg border-t border-primary-800 p-4"
+                                className="sticky bottom-0 bg-white/95 backdrop-blur-lg border-t border-gray-800 p-4"
                             >
-                                <div className="flex items-center justify-center gap-6 text-xs text-primary-500">
+                                <div className="flex items-center justify-center gap-6 text-xs text-white0">
                                     <div className="flex items-center gap-1">
                                         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                                             <path
@@ -139,6 +139,8 @@ export default function PaymentModal({ isOpen, onClose, children }: PaymentModal
         </AnimatePresence>
     );
 }
+
+
 
 
 

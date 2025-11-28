@@ -30,7 +30,7 @@ export default function ThemeSwitcher() {
 
     return (
         <div className="fixed bottom-6 right-6 z-50">
-            <div className={`absolute bottom-full right-0 mb-4 bg-primary-50 dark:bg-primary-800 rounded-lg shadow-xl p-2 transition-all duration-300 ${isOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}`}>
+            <div className={`absolute bottom-full right-0 mb-4 bg-white dark:bg-gray-50 rounded-lg shadow-xl p-2 transition-all duration-300 ${isOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}`}>
                 <div className="flex flex-col gap-2">
                     {themes.map((theme) => (
                         <button
@@ -45,7 +45,7 @@ export default function ThemeSwitcher() {
             </div>
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="bg-primary-900 text-primary-50 p-3 rounded-full shadow-lg hover:bg-primary-800 transition-colors"
+                className="bg-white text-white p-3 rounded-full shadow-lg hover:bg-gray-100 transition-colors"
                 aria-label="Toggle theme switcher"
             >
                 <Palette size={24} />
@@ -53,6 +53,8 @@ export default function ThemeSwitcher() {
         </div>
     );
 }
+
+
 
 
 

@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" data-theme="red" suppressHydrationWarning>
       <body
-        className={`${manrope.variable} ${inter.variable} font-sans antialiased bg-primary-50 text-primary-900`}
+        className={`${manrope.variable} ${inter.variable} font-sans antialiased bg-white text-gray-900`}
       >
         <Navbar />
         <main className="min-h-screen">{children}</main>

@@ -80,13 +80,13 @@ export default function Navbar() {
         <>
             <header
                 className={cn(
-                    "fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[95%] max-w-7xl rounded-full border border-primary-400/30 bg-gradient-to-r from-primary-100/95 via-primary-50/95 to-primary-100/95 backdrop-blur-md shadow-lg",
+                    "fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[95%] max-w-7xl rounded-full border border-white/30 bg-white/5 backdrop-blur-sm shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.25)]",
                     scrolled ? "py-3" : "py-4"
                 )}
             >
                 <div className="container mx-auto px-6 flex justify-between items-center">
-                    <Link href="/" className="text-2xl font-bold text-primary-900 relative z-50">
-                        Conf<span className="text-primary-600">2025</span>
+                    <Link href="/" className="text-2xl font-bold text-gray-900 relative z-50">
+                        Conf<span className="text-gray-700">2025</span>
                     </Link>
 
                     {/* Desktop Nav */}
@@ -100,7 +100,7 @@ export default function Navbar() {
                             >
                                 <Link
                                     href={item.href}
-                                    className="flex items-center gap-1 text-sm font-medium text-primary-700 hover:text-primary-600 transition-colors py-2"
+                                    className="flex items-center gap-1 text-sm font-bold text-gray-700 hover:text-gray-900 transition-colors py-2"
                                 >
                                     {item.label}
                                     {item.children && <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />}
@@ -114,13 +114,13 @@ export default function Navbar() {
                                             animate={{ opacity: 1, y: 0, scale: 1 }}
                                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
                                             transition={{ duration: 0.2 }}
-                                            className="absolute top-full left-0 w-56 bg-primary-50 border border-primary-200 rounded-xl shadow-xl overflow-hidden p-2"
+                                            className="absolute top-full left-0 w-56 bg-white border border-gray-200 rounded-xl shadow-xl overflow-hidden p-2"
                                         >
                                             {item.children.map((child) => (
                                                 <Link
                                                     key={child.label}
                                                     href={child.href}
-                                                    className="block px-4 py-2 text-sm text-primary-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors"
+                                                    className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
                                                 >
                                                     {child.label}
                                                 </Link>
@@ -132,7 +132,7 @@ export default function Navbar() {
                         ))}
                         <Link
                             href="/registration"
-                            className="px-5 py-2 bg-gradient-to-r from-primary-600 to-primary-900 hover:from-primary-500 hover:to-primary-600 text-primary-50 text-sm font-semibold rounded-full transition-all shadow-md hover:shadow-lg"
+                            className="px-5 py-2 bg-gray-900 hover:bg-gray-800 text-white text-sm font-semibold rounded-full transition-all shadow-md hover:shadow-lg"
                         >
                             Register
                         </Link>
@@ -140,7 +140,7 @@ export default function Navbar() {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="lg:hidden p-2 text-primary-900 relative z-[110]"
+                        className="lg:hidden p-2 text-gray-900 relative z-[110]"
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
                         {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -156,7 +156,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: "100%" }}
                         transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                        className="fixed inset-0 bg-gradient-to-b from-primary-50 to-primary-50 z-[100] lg:hidden px-6 overflow-y-auto"
+                        className="fixed inset-0 bg-white z-[100] lg:hidden px-6 overflow-y-auto"
                     >
                         <div className="flex justify-end py-8">
                             <button

@@ -22,7 +22,7 @@ const config: Config = {
                     800: "var(--primary-800)",
                     900: "var(--primary-900)",
                 },
-                background: "#F5F7FF",
+                background: "#FFFFFF",
                 foreground: "#0A0A0A",
             },
             fontFamily: {

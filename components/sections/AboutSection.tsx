@@ -5,16 +5,16 @@ import FadeIn from "@/components/animations/FadeIn";
 
 export default function AboutSection() {
     return (
-        <section id="about" className="py-32 bg-gradient-to-b from-white to-primary-50 relative overflow-hidden">
+        <section id="about" className="py-32 bg-white relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
                 <div className="flex flex-col lg:flex-row items-center gap-16">
                     <div className="lg:w-1/2">
                         <FadeIn direction="right">
-                            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-primary-900">
+                            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
                                 Shaping the Future of <br />
-                                <span className="text-primary-600">Global Innovation</span>
+                                <span className="text-black">Global Innovation</span>
                             </h2>
-                            <div className="space-y-6 text-lg text-primary-700 leading-relaxed">
+                            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                                 <p>
                                     Conf2025 is more than just a conference; it's a convergence of the brightest minds in technology, science, and business. We bring together visionaries to challenge the status quo and define the next generation of digital transformation.
                                 </p>
@@ -46,9 +46,9 @@ export default function AboutSection() {
 
                     <div className="lg:w-1/2 w-full">
                         <FadeIn direction="left" delay={0.2}>
-                            <div className="relative aspect-square md:aspect-video lg:aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-primary-100 to-primary-100 border border-primary-200 backdrop-blur-sm p-8 flex items-center justify-center group">
+                            <div className="relative aspect-square md:aspect-video lg:aspect-square rounded-3xl overflow-hidden bg-gray-50 border border-gray-200 backdrop-blur-sm p-8 flex items-center justify-center group">
                                 <div className="absolute inset-0 bg-grid-white/[0.05] [mask-image:linear-gradient(0deg,transparent,black)]" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-primary-50 via-transparent to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-gray-100 via-transparent to-transparent" />
 
                                 {/* Abstract Graphic */}
                                 <div className="relative w-full h-full flex items-center justify-center">

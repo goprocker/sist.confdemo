@@ -38,18 +38,18 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
 
     const TimeUnit = ({ value, label }: { value: number; label: string }) => (
         <div className="flex flex-col items-center">
-            <div className="w-20 h-32 sm:w-24 sm:h-40 border border-white/30 rounded-2xl flex items-center justify-center bg-primary-50/5 backdrop-blur-sm mb-2">
-                <span className="text-4xl sm:text-5xl font-bold text-primary-900 font-mono">
+            <div className="w-20 h-32 sm:w-24 sm:h-40 border border-white/30 rounded-2xl flex items-center justify-center bg-white/5 backdrop-blur-sm mb-2">
+                <span className="text-4xl sm:text-5xl font-bold text-gray-900 font-mono">
                     {value.toString().padStart(2, "0")}
                 </span>
             </div>
-            <span className="text-lg font-bold text-primary-900 uppercase tracking-wider">{label}</span>
+            <span className="text-lg font-bold text-gray-900 uppercase tracking-wider">{label}</span>
         </div>
     );
 
     return (
         <div className="flex flex-col items-center gap-8 my-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-primary-900 uppercase tracking-wide text-center">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 uppercase tracking-wide text-center">
                 Last Day to Register is July 15th, 2026
             </h3>
             <div className="flex gap-4 sm:gap-6">
@@ -61,6 +61,8 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
         </div>
     );
 }
+
+
 
 
 

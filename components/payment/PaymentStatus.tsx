@@ -34,7 +34,7 @@ export default function PaymentStatus({
                 <motion.div
                     animate={{ rotate: 360 }}
                     transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
-                    className="w-16 h-16 border-4 border-primary-500 border-t-transparent rounded-full"
+                    className="w-16 h-16 border-4 border-gray-500 border-t-transparent rounded-full"
                 />
             ),
             title: 'Processing Payment',
@@ -91,7 +91,7 @@ export default function PaymentStatus({
                 <motion.svg
                     animate={{ scale: [1, 1.1, 1] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
-                    className="w-16 h-16 text-primary-500"
+                    className="w-16 h-16 text-white0"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                 >
@@ -125,7 +125,7 @@ export default function PaymentStatus({
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-primary-800/50 backdrop-blur-lg rounded-2xl p-8 border border-primary-700 shadow-2xl"
+                className="bg-gray-50/50 backdrop-blur-lg rounded-2xl p-8 border border-gray-700 shadow-2xl"
             >
                 {/* Icon */}
                 <div className="flex justify-center mb-6">{config.icon}</div>
@@ -145,7 +145,7 @@ export default function PaymentStatus({
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.3 }}
-                    className="text-primary-400 text-center mb-6"
+                    className="text-gray-400 text-center mb-6"
                 >
                     {config.description}
                 </motion.p>
@@ -156,11 +156,11 @@ export default function PaymentStatus({
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
-                        className="space-y-3 bg-primary-900/50 rounded-lg p-6 border border-primary-700"
+                        className="space-y-3 bg-white/50 rounded-lg p-6 border border-gray-700"
                     >
                         {amount !== undefined && (
                             <div className="flex justify-between items-center">
-                                <span className="text-primary-400">Amount Paid</span>
+                                <span className="text-gray-400">Amount Paid</span>
                                 <span className="font-semibold text-green-400">
                                     {currency.toUpperCase()} {amount.toFixed(2)}
                                 </span>
@@ -169,8 +169,8 @@ export default function PaymentStatus({
 
                         {last4 && brand && (
                             <div className="flex justify-between items-center">
-                                <span className="text-primary-400">Payment Method</span>
-                                <span className="font-semibold text-primary-50">
+                                <span className="text-gray-400">Payment Method</span>
+                                <span className="font-semibold text-white">
                                     {brand.charAt(0).toUpperCase() + brand.slice(1)} â€¢â€¢â€¢â€¢ {last4}
                                 </span>
                             </div>
@@ -178,11 +178,11 @@ export default function PaymentStatus({
 
                         {confirmationCode && (
                             <div className="flex justify-between items-center">
-                                <span className="text-primary-400">Confirmation Code</span>
+                                <span className="text-gray-400">Confirmation Code</span>
                                 <motion.span
                                     initial={{ scale: 0.9 }}
                                     animate={{ scale: 1 }}
-                                    className="font-mono font-semibold text-primary-400 bg-primary-500/10 px-3 py-1 rounded"
+                                    className="font-mono font-semibold text-gray-400 bg-white0/10 px-3 py-1 rounded"
                                 >
                                     {confirmationCode}
                                 </motion.span>
@@ -190,8 +190,8 @@ export default function PaymentStatus({
                         )}
 
                         <div className="flex justify-between items-center text-sm">
-                            <span className="text-primary-400">Transaction Date</span>
-                            <span className="text-primary-300">
+                            <span className="text-gray-400">Transaction Date</span>
+                            <span className="text-gray-300">
                                 {new Date().toLocaleDateString('en-US', {
                                     year: 'numeric',
                                     month: 'long',
@@ -219,6 +219,8 @@ export default function PaymentStatus({
         </div>
     );
 }
+
+
 
 
 

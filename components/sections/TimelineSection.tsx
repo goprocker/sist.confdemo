@@ -25,12 +25,12 @@ const schedule = [
 
 export default function TimelineSection() {
     return (
-        <section id="schedule" className="py-32 bg-gradient-to-b from-primary-50 to-primary-50">
+        <section id="schedule" className="py-32 bg-gradient-to-b from-white to-white">
             <div className="container mx-auto px-6">
                 <FadeIn>
                     <div className="text-center mb-20">
-                        <h2 className="text-4xl font-bold text-primary-900 mb-6">Conference Schedule</h2>
-                        <p className="text-xl text-primary-700 max-w-2xl mx-auto">
+                        <h2 className="text-4xl font-bold text-gray-900 mb-6">Conference Schedule</h2>
+                        <p className="text-xl text-gray-700 max-w-2xl mx-auto">
                             Three days of packed content, learning, and networking.
                         </p>
                     </div>
@@ -38,7 +38,7 @@ export default function TimelineSection() {
 
                 <div className="relative max-w-4xl mx-auto">
                     {/* Vertical Line */}
-                    <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-primary-400 md:transform md:-translate-x-1/2 ml-8 md:ml-0" />
+                    <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-gray-300 md:transform md:-translate-x-1/2 ml-8 md:ml-0" />
 
                     <div className="space-y-16">
                         {schedule.map((item, index) => (
@@ -47,18 +47,18 @@ export default function TimelineSection() {
 
                                     {/* Content */}
                                     <div className="w-full md:w-1/2 pl-20 md:pl-0 md:px-12">
-                                        <div className={`bg-primary-50 border border-primary-200 p-8 rounded-2xl hover:border-primary-400 transition-colors shadow-sm hover:shadow-md ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
+                                        <div className={`bg-white border border-gray-200 p-8 rounded-2xl hover:border-gray-400 transition-colors shadow-sm hover:shadow-md ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
                                             <div className={`flex flex-col ${index % 2 === 0 ? 'md:items-start' : 'md:items-end'}`}>
-                                                <span className="md:hidden text-primary-900 font-bold text-xl mb-2 block">{item.day}</span>
-                                                <span className="text-primary-600 font-bold tracking-wider uppercase text-sm mb-2">{item.date}</span>
-                                                <h3 className="text-2xl font-bold text-primary-900 mb-4">{item.title}</h3>
-                                                <ul className={`space-y-2 text-primary-700 ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
+                                                <span className="md:hidden text-gray-900 font-bold text-xl mb-2 block">{item.day}</span>
+                                                <span className="text-gray-600 font-bold tracking-wider uppercase text-sm mb-2">{item.date}</span>
+                                                <h3 className="text-2xl font-bold text-gray-900 mb-4">{item.title}</h3>
+                                                <ul className={`space-y-2 text-gray-700 ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
                                                     {item.highlights.map((highlight, i) => (
                                                         <li key={i} className="flex items-center gap-2 justify-start md:justify-inherit">
-                                                            {index % 2 !== 0 && <span className="hidden md:inline-block w-1.5 h-1.5 rounded-full bg-primary-500/50" />}
+                                                            {index % 2 !== 0 && <span className="hidden md:inline-block w-1.5 h-1.5 rounded-full bg-white0/50" />}
                                                             <span>{highlight}</span>
-                                                            {(index % 2 === 0 || true) && <span className="md:hidden w-1.5 h-1.5 rounded-full bg-primary-500/50" />}
-                                                            {index % 2 === 0 && <span className="hidden md:inline-block w-1.5 h-1.5 rounded-full bg-primary-500/50" />}
+                                                            {(index % 2 === 0 || true) && <span className="md:hidden w-1.5 h-1.5 rounded-full bg-white0/50" />}
+                                                            {index % 2 === 0 && <span className="hidden md:inline-block w-1.5 h-1.5 rounded-full bg-white0/50" />}
                                                         </li>
                                                     ))}
                                                 </ul>
@@ -67,10 +67,10 @@ export default function TimelineSection() {
                                     </div>
 
                                     {/* Center Dot */}
-                                    <div className="absolute left-8 md:left-1/2 top-8 w-4 h-4 rounded-full bg-primary-50 border-4 border-primary-600 transform -translate-x-1/2 z-10" />
+                                    <div className="absolute left-8 md:left-1/2 top-8 w-4 h-4 rounded-full bg-white border-4 border-gray-600 transform -translate-x-1/2 z-10" />
 
                                     {/* Day Label */}
-                                    <div className={`hidden md:block absolute left-1/2 top-7 transform ${index % 2 === 0 ? 'md:-translate-x-[calc(100%+2rem)]' : 'md:translate-x-8'} text-xl font-bold text-primary-900 z-10`}>
+                                    <div className={`hidden md:block absolute left-1/2 top-7 transform ${index % 2 === 0 ? 'md:-translate-x-[calc(100%+2rem)]' : 'md:translate-x-8'} text-xl font-bold text-gray-900 z-10`}>
                                         {item.day}
                                     </div>
 
@@ -83,6 +83,8 @@ export default function TimelineSection() {
         </section>
     );
 }
+
+
 
 
 
