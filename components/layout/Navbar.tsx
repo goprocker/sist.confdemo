@@ -132,7 +132,7 @@ export default function Navbar() {
                         ))}
                         <Link
                             href="/registration"
-                            className="px-5 py-2 bg-gray-900 hover:bg-gray-800 text-white text-sm font-semibold rounded-full transition-all shadow-md hover:shadow-lg"
+                            className="px-5 py-2 bg-secondary-600 hover:bg-secondary-700 text-white text-sm font-semibold rounded-full transition-all shadow-md hover:shadow-lg"
                         >
                             Register
                         </Link>
@@ -160,7 +160,7 @@ export default function Navbar() {
                     >
                         <div className="flex justify-end py-8">
                             <button
-                                className="p-2 text-primary-900"
+                                className="p-2 text-gray-900 hover:text-secondary-600 transition-colors"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 <X size={28} />
@@ -181,7 +181,7 @@ export default function Navbar() {
                                     >
                                         <Link
                                             href={item.href}
-                                            className="text-lg font-medium text-primary-900"
+                                            className="text-lg font-medium text-gray-900 hover:text-secondary-600 transition-colors"
                                             onClick={(e) => {
                                                 if (item.children) e.preventDefault();
                                             }}
@@ -192,8 +192,8 @@ export default function Navbar() {
                                             <ChevronRight
                                                 size={20}
                                                 className={cn(
-                                                    "text-primary-500 transition-transform duration-300",
-                                                    mobileExpandedIndex === index ? "rotate-90" : ""
+                                                    "text-gray-500 transition-transform duration-300 group-hover:text-secondary-500",
+                                                    mobileExpandedIndex === index ? "rotate-90 text-secondary-500" : ""
                                                 )}
                                             />
                                         )}
@@ -213,7 +213,7 @@ export default function Navbar() {
                                                         <Link
                                                             key={child.label}
                                                             href={child.href}
-                                                            className="text-primary-700 hover:text-primary-600"
+                                                            className="text-gray-600 hover:text-secondary-600 transition-colors"
                                                             onClick={() => setMobileMenuOpen(false)}
                                                         >
                                                             {child.label}

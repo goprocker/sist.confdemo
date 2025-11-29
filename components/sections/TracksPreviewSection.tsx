@@ -62,13 +62,13 @@ export default function TracksPreviewSection() {
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{ duration: 0.3 }}
-                                className="relative bg-white backdrop-blur-md border border-gray-200 p-8 rounded-2xl transition-all duration-300 group cursor-pointer overflow-hidden hover:shadow-lg hover:shadow-primary-600/30 hover:border-gray-400 hover:-translate-y-2"
+                                className="relative bg-white backdrop-blur-md border border-gray-200 p-8 rounded-2xl transition-all duration-300 group cursor-pointer overflow-hidden hover:shadow-lg hover:shadow-secondary-600/30 hover:border-secondary-400 hover:-translate-y-2"
                             >
-                                <div className="absolute inset-0 bg-gradient-to-br from-primary-100/30 to-primary-100/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                <div className="absolute inset-0 bg-gradient-to-br from-secondary-100/30 to-secondary-100/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                                 <div className="relative z-10">
                                     <div className="flex justify-between items-start mb-6">
-                                        <div className="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center text-gray-600 group-hover:bg-gray-200 group-hover:text-gray-900 transition-colors shadow-sm group-hover:shadow-primary-500/25">
+                                        <div className="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center text-gray-600 group-hover:bg-secondary-100 group-hover:text-secondary-700 transition-colors shadow-sm group-hover:shadow-secondary-500/25">
                                             <track.icon size={24} />
                                         </div>
                                         <span className="text-xs font-medium text-gray-600 uppercase tracking-wider border border-gray-300 px-2 py-1 rounded bg-white">

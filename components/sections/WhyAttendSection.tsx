@@ -41,7 +41,7 @@ function SpotlightCard({ reason, index }: { reason: typeof reasons[0], index: nu
     return (
         <FadeIn delay={index * 0.1} className="h-full">
             <div
-                className="group relative border border-gray-200 bg-white px-8 py-10 rounded-2xl h-full overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+                className="group relative border border-secondary-700 bg-secondary-900 px-8 py-10 rounded-2xl h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
                 onMouseMove={handleMouseMove}
             >
                 <motion.div
@@ -50,18 +50,18 @@ function SpotlightCard({ reason, index }: { reason: typeof reasons[0], index: nu
                         background: useMotionTemplate`
                 radial-gradient(
                 650px circle at ${mouseX}px ${mouseY}px,
-                rgba(147, 51, 234, 0.15),
+                rgba(14, 165, 233, 0.15),
                 transparent 80%
               )
             `,
                     }}
                 />
                 <div className="relative">
-                    <div className="w-14 h-14 bg-gray-50 rounded-xl flex items-center justify-center text-gray-600 mb-6 group-hover:bg-gray-200 group-hover:text-gray-900 transition-colors">
+                    <div className="w-14 h-14 bg-secondary-800 rounded-xl flex items-center justify-center text-secondary-400 mb-6 group-hover:bg-white group-hover:text-secondary-900 transition-colors">
                         <reason.icon size={28} />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">{reason.title}</h3>
-                    <p className="text-gray-700 leading-relaxed">
+                    <h3 className="text-xl font-bold text-white mb-4">{reason.title}</h3>
+                    <p className="text-secondary-400 leading-relaxed">
                         {reason.description}
                     </p>
                 </div>
@@ -76,8 +76,8 @@ export default function WhyAttendSection() {
             <div className="container mx-auto px-6">
                 <FadeIn>
                     <div className="text-center mb-20">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Attend Conf2025?</h2>
-                        <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+                        <h2 className="text-4xl font-bold text-secondary-900 mb-6">Why Attend Conf2025?</h2>
+                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                             Experience a conference designed to inspire, educate, and connect.
                         </p>
                     </div>

@@ -10,11 +10,11 @@ export default function AboutSection() {
                 <div className="flex flex-col lg:flex-row items-center gap-16">
                     <div className="lg:w-1/2">
                         <FadeIn direction="right">
-                            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
+                            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-secondary-900">
                                 Shaping the Future of <br />
-                                <span className="text-black">Global Innovation</span>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary-600 to-secondary-400">Global Innovation</span>
                             </h2>
-                            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+                            <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                                 <p>
                                     Conf2025 is more than just a conference; it's a convergence of the brightest minds in technology, science, and business. We bring together visionaries to challenge the status quo and define the next generation of digital transformation.
                                 </p>
@@ -36,8 +36,8 @@ export default function AboutSection() {
                                         transition={{ delay: 0.2 + index * 0.1 }}
                                         className="flex items-center gap-3"
                                     >
-                                        <div className="w-2 h-2 rounded-full bg-primary-600" />
-                                        <span className="text-primary-800">{item}</span>
+                                        <div className="w-2 h-2 rounded-full bg-secondary-900" />
+                                        <span className="text-gray-800 font-medium">{item}</span>
                                     </motion.div>
                                 ))}
                             </div>
@@ -46,25 +46,25 @@ export default function AboutSection() {
 
                     <div className="lg:w-1/2 w-full">
                         <FadeIn direction="left" delay={0.2}>
-                            <div className="relative aspect-square md:aspect-video lg:aspect-square rounded-3xl overflow-hidden bg-gray-50 border border-gray-200 backdrop-blur-sm p-8 flex items-center justify-center group">
-                                <div className="absolute inset-0 bg-grid-white/[0.05] [mask-image:linear-gradient(0deg,transparent,black)]" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-gray-100 via-transparent to-transparent" />
+                            <div className="relative aspect-square md:aspect-video lg:aspect-square rounded-3xl overflow-hidden bg-secondary-500 border border-secondary-400 backdrop-blur-sm p-8 flex items-center justify-center group shadow-2xl">
+                                <div className="absolute inset-0 bg-grid-white/[0.1] [mask-image:linear-gradient(0deg,transparent,black)]" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-secondary-600/50 via-transparent to-transparent" />
 
                                 {/* Abstract Graphic */}
                                 <div className="relative w-full h-full flex items-center justify-center">
                                     <motion.div
                                         animate={{ rotate: 360 }}
                                         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                                        className="w-[200px] h-[200px] border border-primary-400/40 rounded-full absolute"
+                                        className="w-[200px] h-[200px] border border-white/30 rounded-full absolute"
                                     />
                                     <motion.div
                                         animate={{ rotate: -360 }}
                                         transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                                        className="w-[300px] h-[300px] border border-primary-400/30 rounded-full absolute"
+                                        className="w-[300px] h-[300px] border border-white/20 rounded-full absolute"
                                     />
                                     <div className="text-center z-10">
-                                        <span className="text-6xl font-bold text-primary-900 block mb-2">25+</span>
-                                        <span className="text-primary-600 uppercase tracking-widest text-sm">Years of Excellence</span>
+                                        <span className="text-6xl font-bold text-white block mb-2">25+</span>
+                                        <span className="text-white/90 uppercase tracking-widest text-sm font-medium">Years of Excellence</span>
                                     </div>
                                 </div>
                             </div>

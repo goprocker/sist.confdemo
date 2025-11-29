@@ -58,7 +58,7 @@ export default function SpeakersPreviewSection() {
                         <FadeIn key={speaker.id} delay={index * 0.1}>
                             <div className="group relative overflow-hidden rounded-2xl bg-gray-50 aspect-[3/4]">
                                 {/* Placeholder Image Background */}
-                                <div className="absolute inset-0 bg-gray-100 flex items-center justify-center text-white0 text-lg font-bold">
+                                <div className="absolute inset-0 bg-gray-100 flex items-center justify-center text-gray-400 text-lg font-bold">
                                     {speaker.name} Photo
                                 </div>
 

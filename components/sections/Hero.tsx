@@ -40,7 +40,7 @@ export default function Hero() {
 
                 <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 leading-tight tracking-tight flex flex-col items-center">
                     <TextReveal delay={0.3}>Innovate.</TextReveal>
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-red-500 to-red-600">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary-600 via-secondary-500 to-secondary-600">
                         <TextReveal delay={0.5}>Transform.</TextReveal>
                     </span>
                     <TextReveal delay={0.7}>Lead.</TextReveal>
@@ -55,7 +55,7 @@ export default function Hero() {
 
                 <FadeIn delay={1.1}>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                        <Link href="/registration" className="group relative px-8 py-4 bg-gradient-to-r from-white0 to-primary-600 hover:from-primary-600 hover:to-primary-900 text-white rounded-full font-bold text-lg transition-all transform hover:scale-105 hover:shadow-[0_10px_40px_-10px_rgba(168,85,247,0.6)] flex items-center gap-2">
+                        <Link href="/registration" className="group relative px-8 py-4 bg-gradient-to-r from-secondary-500 to-secondary-700 hover:from-secondary-600 hover:to-secondary-800 text-white rounded-full font-bold text-lg transition-all transform hover:scale-105 hover:shadow-[0_10px_40px_-10px_rgba(14,165,233,0.6)] flex items-center gap-2">
                             Register Now <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                         </Link>
                         <Link href="/about" className="px-8 py-4 bg-white/80 hover:bg-white backdrop-blur-sm border border-gray-300 text-gray-900 rounded-full font-bold text-lg transition-all hover:border-gray-400 hover:shadow-lg">

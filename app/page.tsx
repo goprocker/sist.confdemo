@@ -1,4 +1,5 @@
 ﻿import Hero from "@/components/sections/Hero";
+import ChancellorMessage from "@/components/sections/ChancellorMessage";
 import AboutSection from "@/components/sections/AboutSection";
 import WhyAttendSection from "@/components/sections/WhyAttendSection";
 import TracksPreviewSection from "@/components/sections/TracksPreviewSection";
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <div className="flex flex-col bg-white min-h-screen">
       <Hero />
+      <ChancellorMessage />
       <AboutSection />
       <StatsStrip />
       <WhyAttendSection />

@@ -29,7 +29,7 @@ export default function PaymentStatus({
 
     const statusConfig = {
         processing: {
-            color: 'blue',
+            color: 'secondary',
             icon: (
                 <motion.div
                     animate={{ rotate: 360 }}
@@ -91,7 +91,7 @@ export default function PaymentStatus({
                 <motion.svg
                     animate={{ scale: [1, 1.1, 1] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
-                    className="w-16 h-16 text-white0"
+                    className="w-16 h-16 text-yellow-500"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                 >

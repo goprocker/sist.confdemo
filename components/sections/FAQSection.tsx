@@ -32,12 +32,12 @@ export default function FAQSection() {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     return (
-        <section className="py-32 bg-gradient-to-b from-white to-white">
+        <section className="py-32 bg-white">
             <div className="container mx-auto px-6 max-w-3xl">
                 <FadeIn>
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-                        <p className="text-xl text-gray-700">
+                        <h2 className="text-4xl font-bold text-secondary-900 mb-6">Frequently Asked Questions</h2>
+                        <p className="text-xl text-gray-600">
                             Everything you need to know about Conf2025.
                         </p>
                     </div>
@@ -46,13 +46,13 @@ export default function FAQSection() {
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (
                         <FadeIn key={index} delay={index * 0.1}>
-                            <div className="border border-gray-200 rounded-2xl bg-white overflow-hidden shadow-sm">
+                            <div className="border border-secondary-700 rounded-2xl bg-secondary-900 overflow-hidden shadow-lg">
                                 <button
                                     onClick={() => setActiveIndex(activeIndex === index ? null : index)}
-                                    className="w-full flex justify-between items-center p-6 text-left hover:bg-white transition-colors"
+                                    className="w-full flex justify-between items-center p-6 text-left hover:bg-secondary-800 transition-colors"
                                 >
-                                    <span className="text-lg font-medium text-gray-900">{faq.question}</span>
-                                    <span className="text-gray-600">
+                                    <span className="text-lg font-medium text-white">{faq.question}</span>
+                                    <span className="text-secondary-400">
                                         {activeIndex === index ? <Minus size={20} /> : <Plus size={20} />}
                                     </span>
                                 </button>
@@ -64,7 +64,7 @@ export default function FAQSection() {
                                             exit={{ height: 0, opacity: 0 }}
                                             transition={{ duration: 0.3 }}
                                         >
-                                            <div className="px-6 pb-6 text-gray-700 leading-relaxed">
+                                            <div className="px-6 pb-6 text-secondary-300 leading-relaxed border-t border-secondary-700 pt-4">
                                                 {faq.answer}
                                             </div>
                                         </motion.div>

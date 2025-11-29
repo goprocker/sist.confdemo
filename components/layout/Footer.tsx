@@ -18,10 +18,10 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
                         <ul className="space-y-2">
-                            <li><Link href="/about" className="text-primary-700 hover:text-primary-900 transition-colors">About</Link></li>
-                            <li><Link href="/tracks" className="text-primary-700 hover:text-primary-900 transition-colors">Tracks</Link></li>
-                            <li><Link href="/schedule" className="text-primary-700 hover:text-primary-900 transition-colors">Schedule</Link></li>
-                            <li><Link href="/registration" className="text-primary-700 hover:text-primary-900 transition-colors">Register</Link></li>
+                            <li><Link href="/about" className="text-gray-600 hover:text-secondary-600 transition-colors">About</Link></li>
+                            <li><Link href="/tracks" className="text-gray-600 hover:text-secondary-600 transition-colors">Tracks</Link></li>
+                            <li><Link href="/schedule" className="text-gray-600 hover:text-secondary-600 transition-colors">Schedule</Link></li>
+                            <li><Link href="/registration" className="text-gray-600 hover:text-secondary-600 transition-colors">Register</Link></li>
                         </ul>
                     </div>
 
@@ -30,10 +30,10 @@ export default function Footer() {
                         <p className="text-primary-700 mb-2">contact@conf2025.com</p>
                         <p className="text-primary-700 mb-4">+1 (555) 123-4567</p>
                         <div className="flex space-x-4">
-                            <a href="#" className="text-primary-700 hover:text-primary-900 transition-colors"><Facebook size={20} /></a>
-                            <a href="#" className="text-primary-700 hover:text-primary-900 transition-colors"><Twitter size={20} /></a>
-                            <a href="#" className="text-primary-700 hover:text-primary-900 transition-colors"><Linkedin size={20} /></a>
-                            <a href="#" className="text-primary-700 hover:text-primary-900 transition-colors"><Instagram size={20} /></a>
+                            <a href="#" className="text-gray-600 hover:text-secondary-600 transition-colors"><Facebook size={20} /></a>
+                            <a href="#" className="text-gray-600 hover:text-secondary-600 transition-colors"><Twitter size={20} /></a>
+                            <a href="#" className="text-gray-600 hover:text-secondary-600 transition-colors"><Linkedin size={20} /></a>
+                            <a href="#" className="text-gray-600 hover:text-secondary-600 transition-colors"><Instagram size={20} /></a>
                         </div>
                     </div>
                 </div>

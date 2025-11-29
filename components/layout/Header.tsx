@@ -44,8 +44,8 @@ export default function Header() {
             )}
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
-                <Link href="/" className="text-2xl font-bold text-primary relative z-50">
-                    Conf<span className={cn("transition-colors", scrolled || isOpen ? "text-black" : "text-primary-50")}>2025</span>
+                <Link href="/" className="text-2xl font-bold text-secondary-600 relative z-50">
+                    Conf<span className={cn("transition-colors", scrolled || isOpen ? "text-secondary-900" : "text-primary-50")}>2025</span>
                 </Link>
 
                 {/* Desktop Nav */}
@@ -55,9 +55,9 @@ export default function Header() {
                             key={item.name}
                             href={item.href}
                             className={cn(
-                                "text-sm font-medium transition-colors hover:text-primary",
+                                "text-sm font-medium transition-colors hover:text-secondary-600",
                                 scrolled ? "text-primary-700" : "text-gray-200",
-                                pathname === item.href && "text-primary font-bold"
+                                pathname === item.href && "text-secondary-600 font-bold"
                             )}
                         >
                             {item.name}
@@ -94,7 +94,7 @@ export default function Header() {
                                     href={item.href}
                                     className={cn(
                                         "text-2xl font-bold transition-colors",
-                                        pathname === item.href ? "text-primary" : "text-primary-800 hover:text-primary"
+                                        pathname === item.href ? "text-secondary-600" : "text-primary-800 hover:text-secondary-600"
                                     )}
                                     onClick={() => setIsOpen(false)}
                                 >

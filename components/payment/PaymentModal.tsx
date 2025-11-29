@@ -20,7 +20,7 @@ export default function PaymentModal({ isOpen, onClose, children }: PaymentModal
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={onClose}
-                        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
+                        className="fixed inset-0 bg-secondary-900/60 backdrop-blur-sm z-50"
                     />
 
                     {/* Modal */}
@@ -59,10 +59,10 @@ export default function PaymentModal({ isOpen, onClose, children }: PaymentModal
                                         </svg>
                                     </motion.div>
                                     <div>
-                                        <h2 className="text-xl font-bold text-white">
+                                        <h2 className="text-xl font-bold text-secondary-900">
                                             Secure Payment
                                         </h2>
-                                        <p className="text-sm text-gray-400">
+                                        <p className="text-sm text-gray-600">
                                             Complete your conference registration
                                         </p>
                                     </div>
@@ -70,7 +70,7 @@ export default function PaymentModal({ isOpen, onClose, children }: PaymentModal
 
                                 <button
                                     onClick={onClose}
-                                    className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-gray-100 rounded-lg"
+                                    className="text-gray-600 hover:text-secondary-900 transition-colors p-2 hover:bg-gray-100 rounded-lg"
                                 >
                                     <svg
                                         className="w-6 h-6"
@@ -98,7 +98,7 @@ export default function PaymentModal({ isOpen, onClose, children }: PaymentModal
                                 transition={{ delay: 0.3 }}
                                 className="sticky bottom-0 bg-white/95 backdrop-blur-lg border-t border-gray-800 p-4"
                             >
-                                <div className="flex items-center justify-center gap-6 text-xs text-white0">
+                                <div className="flex items-center justify-center gap-6 text-xs text-gray-600">
                                     <div className="flex items-center gap-1">
                                         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                                             <path
